@@ -41,6 +41,13 @@
     border: 1px solid grey;
 }
 
+@media only screen and (max-width:580px){
+    #footer{
+        padding-left: 35px;
+    padding-right: 50px;
+    }
+}
+
 
 
 

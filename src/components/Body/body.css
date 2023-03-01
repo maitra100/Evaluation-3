@@ -9,3 +9,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+@media only screen and (max-width:580px){
+    #content{
+        padding-left: 35px;
+    padding-right: 50px;
+    }
+}

@@ -6,24 +6,52 @@ import Card from '../Card';
 
 function Body() {
   const [items, setItems] = useState(undefined);
+  const [allItems, setAllItems] = useState(undefined);
+  const [value, setValue] = useState('');
+
+  function seeEvent(event) {
+    setValue(event.target.value);
+    console.log(value);
+    const lists = items.filter(item => {
+      console.log(item.name.includes(value));
+      return item.name.includes(value);
+    });
+    setAllItems(lists);
+    console.log(allItems);
+  }
 
   useEffect(() => {
     axios
       .get('http://localhost:8000/api/events')
       .then(data => {
-        setItems(data.data);
+        const list = data.data.sort((a, b) => a.date > b.date);
+        setItems(list);
       })
       .catch(err => console.log(err));
   }, []);
   return (
     <div id="content">
-      {console.log(items)}
+      <div id="filter">
+        <div id="first">
+          <div id="left">
+            <img />
+            <p>Filter</p>
+            <img />
+          </div>
+          <div id="right">
+            <input type="text" placeholder="EVENT NAME" onChange={seeEvent} value={value} />
+          </div>
+        </div>
+        <div id="second"></div>
+        <div id="third"></div>
+      </div>
       <div id="upper">
         {items ? (
           items.map((item, index) => {
             return (
               <Card
                 key={index}
+                id={item.id}
                 name={item.name}
                 description={item.description}
                 venue={item.venue}

@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
-import Header from '../src/components/Header';
-import Body from '../src/components/Body';
-import Footer from '../src/components/Footer';
+import Home from './public/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Event from './public/Event';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Body />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/event/:id" element={<Event />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

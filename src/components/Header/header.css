@@ -13,3 +13,10 @@ header{
     height: 60px;
     font-size: 34px;
 }
+
+@media only screen and (max-width:580px){
+    #heading{
+        padding-left: 35px;
+    padding-right: 50px;
+    }
+}

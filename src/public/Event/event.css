@@ -1,0 +1,132 @@
+#uppers{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 85vh;
+    height:auto;
+}
+
+#cards{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10px;
+    width: auto;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    height:fit-content
+}
+
+#descs p{
+    width:auto;
+}
+
+#descs {
+    width: 400px;
+    margin-left: 47px;
+}
+
+#venues{
+    width: 400px;
+    margin-left: 47px;
+}
+
+#datetimes{
+    width: 400px;
+    margin-left: 47px;
+}
+
+#img2{
+    width:500px;
+    height:250px;
+}
+
+@media only screen and (max-width:740px){
+    #cards{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        margin: 10px;
+        width: 300px;
+        border-radius: 5%;
+        background-color: black;
+        color:white
+    }
+    
+    .icon{
+        display:flex;
+        align-items: center;
+        margin-left:4px;
+        margin-right:4px;
+    }
+    
+    #reg{
+        display:flex;
+    }
+    
+    #icons{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    #img2{
+        border-radius: 5%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        width:300px;
+        height:250px;
+    }
+    
+    #venues{
+        width: 245px;
+        margin-left: 29px;
+    }
+    
+    #datetimes{
+        width: 245px;
+        margin-left: 29px;
+    }
+    
+    #datetimes p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    #venues p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    
+    #name p{
+        margin-bottom: 0px;
+        margin-top: 2px;
+        font-size: 23px;
+    }
+    
+    #name{
+        display:flex;
+        justify-content: center;
+    }
+    
+    #descs p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        overflow: hidden;
+    }
+    
+    #descs{
+        width: 245px;
+        margin-left: 29px;
+    }
+}
