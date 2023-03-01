@@ -6,10 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import smallStar from '../../assets/Images/smallStar.png';
 import bigStar from '../../assets/Images/bigStar.png';
 import axios from 'axios';
+import cross from '../../assets/Images/cross.png';
+import tick from '../../assets/Images/tick.png';
 
 // import { useState } from 'react';
 
-function Card({ id, name, description, venue, datetime, areSeatsAvailable, imgUrl, isBookmarked }) {
+function Card({ id, name, description, venue, datetime, areSeatsAvailable, imgUrl, isBookmarked, isRegistered }) {
   const [bookmark, setBookMark] = useState(isBookmarked);
 
   //   const [register, setRegister] = useState(isRegistered);
@@ -43,10 +45,21 @@ function Card({ id, name, description, venue, datetime, areSeatsAvailable, imgUr
       <div id="areSeatsAvailable">{areSeatsAvailable}</div>
       <div id="icons">
         <div id="reg">
-          <div className="icon">
-            <i className="fa-regular fa-bookmark"></i>
-          </div>
-          <p>Register</p>
+          {isRegistered ? (
+            <div className="butto">
+              <div className="ticks">
+                <img src={tick} alt="tick" height="25px" width="25px" />
+              </div>
+              <p>Registered</p>
+            </div>
+          ) : (
+            <div className="butto">
+              <div className="ticks">
+                <img src={cross} alt="cross" height="25px" width="25px" />
+              </div>
+              <p>No seats available</p>
+            </div>
+          )}
         </div>
         <div className="icon" onClick={bookMarkIt}>
           <img src={bookmark ? bigStar : smallStar} alt="bookmark" height="25px" width="25px" />
@@ -67,6 +80,7 @@ Card.propTypes = {
   areSeatsAvailable: PropTypes.bool.isRequired,
   imgUrl: PropTypes.string.isRequired,
   isBookmarked: PropTypes.bool.isRequired,
+  isRegistered: PropTypes.bool.isRequired,
 };
 
 export default Card;

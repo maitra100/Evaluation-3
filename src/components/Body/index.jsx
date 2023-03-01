@@ -58,20 +58,32 @@ function Body() {
             </div>
           </div>
         </div>
-        {/* {photo ? (
+        {photo ? (
           <div>
             <div id="second">
-              <input type="radio" id="html" name="fav_language" value="ALL" />
-              <input type="radio" id="html" name="fav_language" value="BOOKMARKED" />
+              <div>
+                <input type="radio" id="html" name="fav_language" value="ALL" />
+                HTML
+              </div>
+              <div>
+                <input type="radio" id="html" name="fav_language" value="BOOKMARKED" />
+                BOOKMARKED
+              </div>
             </div>
             <div id="third">
-              <input type="radio" id="html" name="fav_language" value="REGISTERED" />
-              <input type="radio" id="html" name="fav_language" value="SEAT AVAILABLE" />
+              <div>
+                <input type="radio" id="html" name="fav_language" value="REGISTERED" />
+                REGISTERED
+              </div>
+              <div>
+                <input type="radio" id="html" name="fav_language" value="SEAT AVAILABLE" />
+                SEAT AVAILABLE
+              </div>
             </div>
           </div>
         ) : (
           <p></p>
-        )} */}
+        )}
       </div>
       <div id="upper">
         {items ? (

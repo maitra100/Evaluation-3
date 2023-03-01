@@ -3,6 +3,30 @@
     padding-right:150px;
 }
 
+#second {
+    display:flex;
+    justify-content: space-between;
+}
+
+.butto{
+    display:flex;
+    justify-content: center;
+}
+
+.ticks{
+    display:flex;
+    align-items: center;
+}
+
+#html{
+    accent-color: black;
+}
+
+#third{
+    display:flex;
+    justify-content: space-between;
+}
+
 .search{
     display: flex;
     align-items: center;
