@@ -12,12 +12,14 @@ function Body() {
   function seeEvent(event) {
     setValue(event.target.value);
     console.log(value);
+
     const lists = items.filter(item => {
-      console.log(item.name.includes(value));
       return item.name.includes(value);
     });
     setAllItems(lists);
+    console.log(lists);
     console.log(allItems);
+    setValue('');
   }
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function Body() {
       .then(data => {
         const list = data.data.sort((a, b) => a.date > b.date);
         setItems(list);
+        setAllItems(list);
       })
       .catch(err => console.log(err));
   }, []);

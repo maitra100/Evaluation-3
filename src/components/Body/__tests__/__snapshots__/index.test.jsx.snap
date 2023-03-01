@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    id="content"
+  >
+    <div
+      id="filter"
+    >
+      <div
+        id="first"
+      >
+        <div
+          id="left"
+        >
+          <img />
+          <p>
+            Filter
+          </p>
+          <img />
+        </div>
+        <div
+          id="right"
+        >
+          <input
+            placeholder="EVENT NAME"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        id="second"
+      />
+      <div
+        id="third"
+      />
+    </div>
+    <div
+      id="upper"
+    >
+      <p>
+        Loading
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
