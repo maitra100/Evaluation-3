@@ -28,6 +28,16 @@ exports[`Header renders correctly 1`] = `
             type="text"
             value=""
           />
+          <div
+            id="search"
+          >
+            <img
+              alt="pic"
+              height="25px"
+              src="search.png"
+              width="25px"
+            />
+          </div>
         </div>
       </div>
       <div

@@ -3,11 +3,39 @@
     padding-right:150px;
 }
 
+.search{
+    display: flex;
+    align-items: center;
+}
+
 #upper{
     margin-top:15px;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#left{
+    display:flex;
+}
+
+#left p{
+    font-size: 25px;
+}
+
+#first{
+    display:flex;
+    justify-content: space-between;
+}
+
+#right{
+    display: flex;
+    justify-content: center;
+}
+
+#right input{
+    margin:25px;
+    border-radius: 8px;
 }
 
 @media only screen and (max-width:580px){
