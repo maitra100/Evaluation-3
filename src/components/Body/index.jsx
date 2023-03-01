@@ -5,14 +5,13 @@ import axios from 'axios';
 import Card from '../Card';
 
 function Body() {
-  const [items, setItems] = useState();
+  const [items, setItems] = useState(undefined);
 
   useEffect(() => {
     axios
       .get('http://localhost:8000/api/events')
       .then(data => {
         setItems(data.data);
-        console.log(data.data);
       })
       .catch(err => console.log(err));
   }, []);
@@ -20,23 +19,41 @@ function Body() {
     <div id="content">
       {console.log(items)}
       <div id="upper">
-        {items.map((item, index) => {
-          return (
-            <Card
-              key={index}
-              name={item.name}
-              description={item.description}
-              venue={item.venue}
-              datetime={item.datetime}
-              timezone={item.timezone}
-              areSeatsAvailable={item.areSeatsAvailable}
-            />
-          );
-        })}
+        {items ? (
+          items.map((item, index) => {
+            return (
+              <Card
+                key={index}
+                name={item.name}
+                description={item.description}
+                venue={item.venue}
+                datetime={item.datetime}
+                timezone={item.timezone}
+                areSeatsAvailable={item.areSeatsAvailable}
+                imgUrl={item.imgUrl}
+                isRegistered={item.isRegistered}
+                isBookmarked={item.isBookmarked}
+              />
+            );
+          })
+        ) : (
+          <p>Loading</p>
+        )}
       </div>
-      <div id="lower"></div>
     </div>
   );
 }
 
 export default Body;
+
+// return (
+//   <Card
+//     key={index}
+//     // name={item.name}
+//     // description={item.description}
+//     // venue={item.venue}
+//     // datetime={item.datetime}
+//     // timezone={item.timezone}
+//     // areSeatsAvailable={item.areSeatsAvailable}
+//   />
+// );

@@ -1,9 +1,11 @@
 #content{
     padding-left:150px;
     padding-right:150px;
-    height:100vh;
 }
 
 #upper{
     margin-top:15px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
