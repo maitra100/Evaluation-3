@@ -1,0 +1,46 @@
+#footer{
+    color: white;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+#button1{
+    width: 25px;
+    height: 25px;
+    border-radius: 15%;
+    background-color: purple;
+    margin-left: 10px;
+    border: 1px solid purple;
+}
+
+#inside{
+    display:flex;
+    align-items: center;
+}
+
+#button2{
+    width:25px;
+    height:25px;
+    border-radius: 15%;
+    background-color: blue;
+    margin-left:10px;
+    border: 1px solid blue;
+}
+
+#button3{
+    width:25px;
+    height:25px;
+    border-radius: 15%;
+    background-color: grey;
+    margin-left:10px;
+    border: 1px solid grey;
+}
+
+
+
+

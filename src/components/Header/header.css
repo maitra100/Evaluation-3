@@ -1,0 +1,15 @@
+header{
+    background-color: black;
+    color: white;
+    height: 60px;
+}
+
+#heading{
+    color: white;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 34px;
+}
